@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Font Archive</title>
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --paper: #ffffff;
+    --paper-2: #fafaf8;
+    --ink: #1a1208;
+    --ink-faded: #7a6848;
+    --ruled: rgba(26,18,8,0.055);
+    --margin: rgba(160,60,20,0.18);
+    --shadow: rgba(26,18,8,0.14);
+    --accent: #b84020;
+}
+
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    min-height: 100vh;
+    background: #ffffff;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN CONTENT */
+.desk {
+    flex: 1;
+    padding: 52px 44px 60px;
+}
+
+/* HEADER TITLE */
+.folder-title {
+    font-family: 'IM Fell English', serif;
+    font-size: 44px;
+    color: rgba(30,18,8,0.92);
+    line-height: 1;
+    letter-spacing: 0.01em;
+}
+
+.folder-title small {
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.18em;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* FOOTER */
+.site-footer {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.footer-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+    filter: saturate(1.05) contrast(1.04);
+}
+
+.footer-fade {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        white 0%,
+        rgba(255,255,255,0.93) 12%,
+        rgba(255,255,255,0.78) 30%,
+        rgba(255,255,255,0.45) 58%,
+        rgba(255,255,255,0.12) 82%,
+        transparent 100%
+    );
+}
+
+.footer-text {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0;
+    padding: 0 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.footer-text span {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    text-shadow: 0 1px 6px rgba(0,0,0,0.45);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .desk { padding: 36px 16px 48px; }
+    .site-footer { height: 240px; }
+    .footer-text { padding: 0 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="desk">
+    <div class="folder-header">
+        <div class="folder-title">
+            <small>Collection No. 1 — 2024</small>
+            Font Archive
+        </div>
+    </div>
+
+    <!-- You can add your font cards/content here -->
+</div>
+
+<footer class="site-footer">
+    <!-- ✅ Use your uploaded footer image -->
+    <img class="footer-img" src="Halftone CMYK@2x (6) 1.png" alt="Footer Landscape">
+
+    <div class="footer-fade"></div>
+
+    <div class="footer-text">
+        <span>End of Archive</span>
+        <span>© 2024</span>
+    </div>
+</footer>
+
+</body>
+</html>
